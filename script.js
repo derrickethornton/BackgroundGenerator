@@ -1,21 +1,21 @@
-var colorOne, colorTwo, input, backgroundColors, backgroundText;
+var colorOne, colorTwo, input, backgroundColorInfo, backgroundTextNode;
 
 colorOne = document.querySelector('.colorOne');
 colorTwo = document.querySelector('.colorTwo');
 input = document.querySelector('input');
-backgroundColors = document.querySelector('h3');
-backgroundText = document.createTextNode(`${colorOne.value} & ${colorTwo.value}`)
-backgroundColors.appendChild(backgroundText);
+backgroundColorInfo = document.querySelector('h3');
+backgroundTextNode = document.createTextNode(`${colorOne.value} & ${colorTwo.value}`)
+backgroundColorInfo.appendChild(backgroundTextNode);
 
 colorOne.addEventListener("input", changeColor);
 colorTwo.addEventListener("input", changeColor);
 
 function changeColor() {
 	document.body.style = `background: linear-gradient(to right, ${colorOne.value}, ${colorTwo.value})`;
-	backgroundColors.removeChild(backgroundText);
-	backgroundColors.appendChild(checkColor());
+	backgroundColorInfo.removeChild(backgroundTextNode);
+	backgroundColorInfo.appendChild(checkColor());
 }
 function checkColor() {
-	backgroundText = document.createTextNode(`${colorOne.value} & ${colorTwo.value}`)
-	return backgroundText;
+	backgroundTextNode = document.createTextNode(`${colorOne.value} & ${colorTwo.value}`)
+	return backgroundTextNode;
 }
