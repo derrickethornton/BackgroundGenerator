@@ -4,10 +4,10 @@ colorOne = document.querySelector('.colorOne');
 colorTwo = document.querySelector('.colorTwo');
 input = document.querySelector('input');
 
-colorOne.addEventListener("input", function() {
-	document.body.style = `background: linear-gradient(to right, ${colorOne.value}, ${colorTwo.value})`;
-});
+colorOne.addEventListener("input", changeColor);
 
-colorTwo.addEventListener("input", function() {
+colorTwo.addEventListener("input", changeColor);
+
+function changeColor() {
 	document.body.style = `background: linear-gradient(to right, ${colorOne.value}, ${colorTwo.value})`;
-});
+}
