@@ -7,12 +7,12 @@ backgroundColorInfo = document.querySelector('h3');
 backgroundTextNode = document.createTextNode(`${colorOne.value} & ${colorTwo.value}`)
 backgroundColorInfo.appendChild(backgroundTextNode);
 
-let changeColor = () => {
+const changeColor = () => {
 	document.body.style = `background: linear-gradient(to right, ${colorOne.value}, ${colorTwo.value})`;
 	backgroundColorInfo.removeChild(backgroundTextNode);
 	backgroundColorInfo.appendChild(checkColor());
 }
-let checkColor = () => {
+const checkColor = () => {
 	backgroundTextNode = document.createTextNode(`${colorOne.value} & ${colorTwo.value}`)
 	return backgroundTextNode;
 }
