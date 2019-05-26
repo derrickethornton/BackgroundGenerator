@@ -17,5 +17,5 @@ const checkColor = () => {
 	return backgroundTextNode;
 }
 
-colorOne.addEventListener("input", changeColor);
-colorTwo.addEventListener("input", changeColor);
+colorOne.addEventListener('input', changeColor);
+colorTwo.addEventListener('input', changeColor);
